@@ -10,11 +10,11 @@
 # Department of Geography, National Taiwan University
 # 2021.12.17
 #
-if ($#argv != 3 ) then
+if ($#argv != 2 ) then
  echo " "
- echo "Usage: BOI_processing.csh Reference_prefix Subswath Coherence"
+ echo "Usage: BOI_processing.csh Reference_prefix Coherence"
  echo " "
- echo "Example: BOI_processing.csh S1_20190704_135158_F2 F2 0.5"
+ echo "Example: BOI_processing.csh S1_20190704_135158_F2 0.5"
  echo " "
  echo "Output: ddphase_ll.dat ddphase_ll.grd ddphase_pix ddphase_pix_ll.dat ddphase_pix_ll.grd ddphase_disp.dat ddphase_disp_ll.dat ddphase_disp_ll.grd"
  echo ""
@@ -27,15 +27,17 @@ if ($#argv != 3 ) then
  exit 1
 endif
 
-echo ""
-echo "Start BOI processing..."
-echo "Processing subswath:" $2
-echo "Threshold coherence:" $3
-
 set PWD = `pwd`
 set ref = `echo $1`
-set Swath = `echo $2`
-set coh = `echo $3`
+set coh = `echo $2`
+set Swath = `echo $ref | awk -F_ '{print $4}'`
+
+
+echo ""
+echo "Start BOI processing..."
+echo "Processing subswath:" $Swath
+echo "Threshold coherence:" $coh
+
 
 ###############################
 # Prepare the necessary files #
