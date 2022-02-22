@@ -5,7 +5,7 @@
 #Example: ls -d 2018* > RawFolder.dat
 set Raw = RawFolder.dat
 ## topodir: put absolute path
-set topodir = "/Document/topography"
+set topodir = "/Document/TopographyFolder"
 
 
 ##Start program
