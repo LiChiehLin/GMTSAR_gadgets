@@ -3,7 +3,7 @@
 ##config: put absolute path and the specific configuration text file
 ##Example:
 ##set config = /Document/config.s1a.txt
-set config = /Document/config.s1a.txt
+set config = /Document/ConfigFolder/config.s1a.txt
 ##Raw: Same as MakeFolder.csh
 set Raw = RawFolder.dat
 ##subswath: Specify the subswath you want to work on
