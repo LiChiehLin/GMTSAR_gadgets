@@ -44,6 +44,7 @@ run "csh Batch_align.csh"
 3. Batch_p2pS1TOPS.csh
 Specify variable 'config' with the file name
 Specify variable 'Raw' with RawFolder.dat
+Specify variable 'subswath' of which subswath you want to work on
 run "csh Batch_p2pS1TOPS.csh"
 
 
