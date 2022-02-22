@@ -1,4 +1,5 @@
 #!bin/csh
+
 # RawFolder.dat is from
 # ls -d year* > RawFolder.dat
 #Example: ls -d 2018* > RawFolder.dat
