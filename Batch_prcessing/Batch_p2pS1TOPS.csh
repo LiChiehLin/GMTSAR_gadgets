@@ -1,9 +1,14 @@
+#!bin/csh
+
+##config: Put the configuration file's full name
 set config = config.s1a.txt
-set Raw = Align1.dat
+##Raw: The same as MakeFolder.csh and Batch_align.csh
+set Raw = RawFolder.dat
 set tmp = `cat $Raw | wc -l`
 set Row = `echo "$tmp-1" | bc -l`
 set PWD = `pwd`
 
+##Specify the subswath you want to work on
 set subswath = 1
 ###################
 # p2p_S1_TOPS.csh #
