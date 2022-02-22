@@ -25,6 +25,7 @@ CaseDirectory/ -> 20170202/ -> S1A_IW_SLC__1SDV_20170202T095720_20170202T095747_
                       .
                       .
                       .
+                      
 TopographyFolder/ -> dem.grd (It can only be named "dem.grd")
 ConfigFolder/ -> config.s1a.txt (It can be named as you like)
                     
