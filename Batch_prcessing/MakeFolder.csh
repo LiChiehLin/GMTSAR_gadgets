@@ -6,6 +6,9 @@
 set Raw = RawFolder.dat
 ## topodir: put absolute path
 set topodir = "/Document/topography"
+
+
+##Start program
 set tmp = `cat $Raw | wc -l`
 set Row = `echo "$tmp-1" | bc -l` 
 set PWD = `pwd`
