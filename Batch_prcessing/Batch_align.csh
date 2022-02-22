@@ -1,6 +1,6 @@
 #!bin/csh
 
-##config: put absolute path
+##config: put absolute path and the specific configuration text file
 ##Example:
 ##set config = /Document/config.s1a.txt
 set config = 
