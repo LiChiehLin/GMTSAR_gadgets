@@ -6,11 +6,15 @@
 set config = 
 ##Raw: Same as MakeFolder.csh
 set Raw = RawFolder.dat
+##subswath: Specify the subswath you want to work on
+set subswath = 1
+
+
+##Start program
 set tmp = `cat $Raw | wc -l`
 set Row = `echo "$tmp-1" | bc -l`
 set PWD = `pwd`
 
-set subswath = 1
 ################################################
 # Align images with align_tops_esd.csh mode 2  #
 ################################################
