@@ -1,4 +1,10 @@
-set config = /Volumes/Ray_QuadX/LiChieh/TestBOI/2018Hualien/Ascending/0203_0209/F2/config.s1a.txt
+#!bin/csh
+
+##config: put absolute path
+##Example:
+##set config = /Document/config.s1a.txt
+set config = 
+##Raw: Same as MakeFolder.csh
 set Raw = RawFolder.dat
 set tmp = `cat $Raw | wc -l`
 set Row = `echo "$tmp-1" | bc -l`
