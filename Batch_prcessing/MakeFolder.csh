@@ -1,7 +1,9 @@
+#!bin/csh
 # RawFolder.dat is from
-# ls -d 2018* > RawFolder.dat
-
+# ls -d year* > RawFolder.dat
+#Example: ls -d 2018* > RawFolder.dat
 set Raw = RawFolder.dat
+## topodir: put absolute path
 set topodir = "/Volumes/Ray_QuadX/LiChieh/2017AmazonDeforestation/topo4Amazon"
 set tmp = `cat $Raw | wc -l`
 set Row = `echo "$tmp-1" | bc -l` 
