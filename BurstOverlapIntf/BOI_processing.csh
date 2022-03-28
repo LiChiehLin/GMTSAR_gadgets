@@ -92,7 +92,7 @@ gmt xyz2grd ddphase_ll.dat -R$W/$E/$S/$N -I$inc_x/$inc_y -Gddphase_ll.grd -V
 
 set LowB = `gmt grdinfo -C ddphase_ll.grd | awk '{print $6}'`
 set UpB = `gmt grdinfo -C ddphase_ll.grd | awk '{print $7}'`
-gmt makecpt -Crainbow -Z -T$LowB/$UpB/0.5 > ddphase.cpt
+gmt makecpt -Crainbow -Z -T$LowB/$UpB/0.1 > ddphase.cpt
 gmt psbasemap -R$W/$E/$S/$N -JM16c -Ba1f1 -BWSen -K > ddphase_ll.ps
 gmt grdimage ddphase_ll.grd -R -J -Cddphase.cpt -O -K -P -Q -V >> ddphase_ll.ps
 gmt psscale -R -J -DJTC+w5i/0.2i+h+e -Cddphase.cpt -O -Bxaf+l"Phase misalignment" >> ddphase_ll.ps
@@ -123,7 +123,7 @@ gmt xyz2grd ddphase_disp_ll.dat -R$W/$E/$S/$N -I$inc_x/$inc_y -Gddphase_disp_ll.
 
 set LowB = `gmt grdinfo -C ddphase_disp_ll.grd | awk '{print $6}'`
 set UpB = `gmt grdinfo -C ddphase_disp_ll.grd | awk '{print $7}'`
-gmt makecpt -Crainbow -Z -T$LowB/$UpB/0.5 > ddphase_disp.cpt
+gmt makecpt -Crainbow -Z -T$LowB/$UpB/0.1 > ddphase_disp.cpt
 gmt psbasemap -R$W/$E/$S/$N -JM16c -Ba1f1 -BWSen -K > ddphase_disp_ll.ps
 gmt grdimage ddphase_disp_ll.grd -JM16c -Cddphase_disp.cpt -O -K -P -Q -V >> ddphase_disp_ll.ps
 gmt psscale -R -J -DJTC+w5i/0.2i+h+e -Cddphase_disp.cpt -O -Bxaf+l"Azimuthal displacement (m)" >> ddphase_disp_ll.ps
