@@ -81,11 +81,11 @@ set N = `cat ddphase_ll.dat | awk '{print $2}' | awk 'BEGIN {max = -90} {if ($1+
 
 set inc_x1 = `cat ddphase_ll.dat | awk 'NR==1 {print $1}'`
 set inc_x2 = `cat ddphase_ll.dat | awk 'NR==2 {print $1}'`
-set inc_x = `echo $inc_x1 - $inc_x2 | bc -l`
+set inc_x = `echo $inc_x2 - $inc_x1 | bc -l`
 
-set inc_y1 = `cat ddphase_ll.dat | awk 'NR==1 {print $1}'`
-set inc_y2 = `cat ddphase_ll.dat | awk 'NR==2 {print $1}'`
-set inc_y = `echo $inc_y1 - $inc_y2 | bc -l`
+set inc_y1 = `cat ddphase_ll.dat | awk 'NR==1 {print $2}'`
+set inc_y2 = `cat ddphase_ll.dat | awk 'NR==2 {print $2}'`
+set inc_y = `echo $inc_y2 - $inc_y1 | bc -l`
 
 #gmt xyz2grd ddphase_ll.dat -R$W/$E/$S/$N -I0.001/0.001 -Gddphase_ll.grd -V
 gmt xyz2grd ddphase_ll.dat -R$W/$E/$S/$N -I$inc_x/$inc_y -Gddphase_ll.grd -V
