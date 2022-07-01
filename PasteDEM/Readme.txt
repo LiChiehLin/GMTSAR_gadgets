@@ -18,7 +18,9 @@ N31E069.hgt	N32E069.hgt	N33E069.hgt	N34E069.hgt
 N31E070.hgt	N32E070.hgt	N33E070.hgt	N34E070.hgt
 N31E071.hgt	N32E071.hgt	N33E071.hgt	N34E071.hgt
 
-seq = (31 32 33 34)
-Pre1 = 068
-Pre2 = 069
-seq2 = (070 071)
+set seq = (31 32 33 34)
+set Pre1 = 068
+set Pre2 = 069
+set seq2 = (070 071)
+set NS = N
+set EW = E
