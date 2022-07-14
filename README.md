@@ -22,4 +22,7 @@ Supplementary codes for GMTSAR processing.
 - make_a_offset.csh will calculate azimuth offset but will not automatically output range offset.  
 - "take_r_offset.csh" just extracts range offset from freq_xcorr.dat so it's named "take_r_offset" not "make_r_offset".  
 
-
+###### ResampleGrd/
+- Re-grid all input grds to the same size and increments
+- Many further processings require grds be the same sizes and pixel spacings
+- Examples could be 3D decomposition, Damage Proxy map, Grd difference etc.
