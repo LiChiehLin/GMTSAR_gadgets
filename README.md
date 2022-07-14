@@ -25,4 +25,4 @@ Supplementary codes for GMTSAR processing.
 ###### ResampleGrd/
 - Re-grid all input grds to the same size and increments
 - Many further processings require grds be the same sizes and pixel spacings
-- Examples could be 3D decomposition, Damage Proxy map, Grd difference etc.
+- Examples could be 3D decomposition, Damage Proxy Map, Grd difference etc.
