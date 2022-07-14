@@ -1,10 +1,10 @@
 #!bin/csh 
 #################################################################
-#								                                                #
+#								#
 # This is to resample each grd to the same size and increment   #
-# for further processing (e.g. 3D decomposition, DPM etc.) 	    #
-#								                                                #
-# The resampled grds are named with suffix _resamp.grd  	      #
+# for further processing (e.g. 3D decomposition, DPM etc.) 	#
+#								#
+# The resampled grds are named with suffix _resamp.grd  	#
 #################################################################
 
 # grds to be resampled to the same size and increments
