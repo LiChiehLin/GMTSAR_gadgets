@@ -10,7 +10,10 @@
 # grds to be resampled to the same size and increments
 # suffix .grd is not needed
 # e.g. set grd = ('los_ll_02020214' 'los_ll_02140228')
+# mode 1: All align to the minimum increment (from coarse to fine)
+# mode 2: All align to the maximum increment (from fine to coarse)
 set grd = ('los_ll_02020214' 'los_ll_02140228')
+set mode = 1
 
 # Get all increments and boundaries
 touch incx_tmp incy_tmp
@@ -26,8 +29,17 @@ foreach line (`echo $grd`)
 end
 
 # Determine the largest increment to align with
-set incx_ref = `cat incx_tmp | sort -n -r | awk 'NR==1 {print $1}'`
-set incy_ref = `cat incy_tmp | sort -n -r | awk 'NR==1 {print $1}'`
+if ($mode == 1) then
+  set incx_ref = `cat incx_tmp | sort -n | awk 'NR==1 {print $1}'`
+  set incy_ref = `cat incy_tmp | sort -n | awk 'NR==1 {print $1}'`
+else if ($mode == 2) then
+  set incx_ref = `cat incx_tmp | sort -n -r | awk 'NR==1 {print $1}'`
+  set incy_ref = `cat incy_tmp | sort -n -r | awk 'NR==1 {print $1}'`
+else 
+  echo "Wrong mode input! Should be 1 or 2"
+  exit
+endif
+
 set xmin_ref = `cat xmin_tmp | sort -n -r | awk 'NR==1 {print $1}'`
 set xmax_ref = `cat xmax_tmp | sort -n | awk 'NR==1 {print $1}'`
 set ymin_ref = `cat ymin_tmp | sort -n -r | awk 'NR==1 {print $1}'`
