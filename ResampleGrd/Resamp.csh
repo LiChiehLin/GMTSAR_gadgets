@@ -1,13 +1,13 @@
 #!bin/csh 
 #################################################################
 #								                                                #
-# This is to resample each grd to the same region and increment #
+# This is to resample each grd to the same size and increment   #
 # for further processing (e.g. 3D decomposition, DPM etc.) 	    #
 #								                                                #
 # The resampled grds are named with suffix _resamp.grd  	      #
 #################################################################
 
-# grds to be resampled to the same region and increments
+# grds to be resampled to the same size and increments
 # suffix .grd is not needed
 # e.g. set grd = ('los_ll_02020214' 'los_ll_02140228')
 set grd = ('los_ll_02020214' 'los_ll_02140228')
