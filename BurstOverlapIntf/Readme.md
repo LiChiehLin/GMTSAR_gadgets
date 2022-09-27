@@ -1,6 +1,7 @@
 ### Calculate the displacement within the burst overlapping area
 > With help from Xu, Xiaohua (Eric)
 
+This code is still under developing
 ----
 How to use this code:  
 1. Execute `align_tops_esd.csh` with mode 2
@@ -13,5 +14,6 @@ How to use this code:
 2. coherence threshold (pixels below it will be omitted)
 3. increment (Set 0.001 and 0.001 for both should be fine)
 
-This code might not perform satisfactorily
-
+`ddphase` is the double-differenced phase
+`ddphase_pix` is the shift of the pixels
+`ddphase_disp` is the shift of the pixels times pixel size
