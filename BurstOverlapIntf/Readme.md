@@ -14,6 +14,6 @@ How to use this code:
 2. coherence threshold (pixels below it will be omitted)
 3. increment (Set 0.001 and 0.001 for both should be fine)
 
-`ddphase` is the double-differenced phase
-`ddphase_pix` is the shift of the pixels
-`ddphase_disp` is the shift of the pixels times pixel size
+`ddphase` is the double-differenced phase  
+`ddphase_pix` is the shift of the pixels  
+`ddphase_disp` is the shift of the pixels times pixel size  
