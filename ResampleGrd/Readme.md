@@ -4,9 +4,11 @@ How to use this code:
 2. Modify the variables in *Resamp.csh*
 3. Execute the code `csh Resamp.csh`
 
+##### Resampled grds will have suffix `_resamp.grd`
 -----
-2 variables need to be modified:
-- grd: The names of the grds. 2 or more is fine (Omit the suffix .grd)
+3 variables need to be modified:
+- grddir: The directory you put the grds in
+- grd: The names of the grds. 2 or more is fine **(Omit the suffix .grd)** 
 - mode (When you have multiple different increments):
-  - 1: from coarse pixel spacing to fine pixel spacing 
-  - 2: from fine pixel spacing to coarse pxiel spacing 
+  - 1: from fine pixel spacing to coarse pixel spacing 
+  - 2: from coarse pixel spacing to fine pxiel spacing 
