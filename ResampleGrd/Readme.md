@@ -4,7 +4,10 @@ How to use this code:
 2. Modify the variables in *Resamp.csh*
 3. Execute the code `csh Resamp.csh`
 
-##### Resampled grds will have suffix `_resamp.grd`
+For MacOS users, please use `Resamp_MacOS.csh`
+##### Resampled grds will have suffix `_resamp.grd`  
+
+### Note that: grds should all have suffix *.grd* and no "." within the filenames
 -----
 3 variables need to be modified:
 - grddir: The directory you put the grds in
@@ -12,3 +15,4 @@ How to use this code:
 - mode (When you have multiple different increments):
   - 1: from fine pixel spacing to coarse pixel spacing 
   - 2: from coarse pixel spacing to fine pxiel spacing 
+
