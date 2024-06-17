@@ -6,8 +6,20 @@ This code is still under developing
 How to use this code:  
 1. Execute `align_tops_esd.csh` with mode 2
 2. Execute `p2p_S1_TOPS.csh`
-3. Execute `BOI_processing.csh` back in `raw/` directory (the one when performing alignment)
-
+3. Execute `BOI_processing.csh` on top of `raw/` directory (the one when performing alignment)  
+  
+Directory arrangement:
+```bash
+├── F2
+│   ├── SLC
+│   ├── intf
+│   │   └── 2024074_2024086
+│   ├── raw
+│   └── topo
+├── raw
+├── topo
+└── BOI_processing.csh
+```
 ----
 4 variables to be put in:
 1. Reference prefix 
